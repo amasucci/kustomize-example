@@ -29,4 +29,11 @@ eval "cat <<EOF
 $(kustomize build ./account-service/overlays/stg/)
 EOF
 "
+
+# OR
+
+eval "cat <<EOF
+$(kustomize build github.com/amasucci/kustomize-example.git/account-service/overlays/stg\?ref=master)
+EOF
+"
 ```
