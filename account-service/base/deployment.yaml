@@ -1,0 +1,22 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: account
+  labels:
+    component: account
+    tier: backend
+spec:
+  selector:
+    matchLabels:
+      component: account
+      tier: backend
+  template:
+    metadata:
+      labels:
+        component: account
+        tier: backend
+    spec:
+      containers:
+      - name: account-service
+        image: account-service:1.0.23
